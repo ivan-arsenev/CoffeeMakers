@@ -12,3 +12,5 @@ Alse it's provides post new messages to news board. Edit or delete this messages
 ### Some of usefull links to docs:
 
     https://express-validator.github.io/docs/
+    https://github.com/auth0/node-jsonwebtoken
+    https://jwt.io/
