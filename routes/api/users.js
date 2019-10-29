@@ -62,7 +62,7 @@ router.post(
 
       await user.save();
 
-      // Return jsonwebtoken
+      // Return jsonwebtoken j
 
       const payload = {
         user: {
