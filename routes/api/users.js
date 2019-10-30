@@ -6,10 +6,10 @@ const User = require('../../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const config = require('config');
+
 // @route POST api/users
 // @desc Register route
 // @access Public
-
 router.post(
   '/',
   [
