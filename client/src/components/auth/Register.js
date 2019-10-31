@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
@@ -18,7 +19,7 @@ const Register = () => {
   const onSubmit = async e => {
     e.preventDefault();
     if (password !== password2) {
-      console.log('Passowerd dont match');
+      console.log('Passwords do not match');
     } else {
       console.log('Great!');
       // const newUser = {
@@ -105,4 +106,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default connect()(Register);
