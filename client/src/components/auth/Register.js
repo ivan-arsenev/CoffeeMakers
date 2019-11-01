@@ -14,7 +14,6 @@ const Register = ({ setAlert }) => {
 
   const { name, email, password, password2 } = formData;
 
-  // name: e.target.value => instead of this using [e.target.name] becouse we want to use name that not unique
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
