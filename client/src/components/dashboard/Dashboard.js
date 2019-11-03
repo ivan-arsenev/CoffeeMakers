@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { getCurrentProfile } from '../../actions/profile';
 import DashboardActions from './DashboardActions';
 import Spinner from '../layout/Spinner';
+import Experience from './Experience';
+import Education from './Education';
 
 // component with jsx and destructored props in params, not only data alse functions that comes from actions
 const Dashboard = ({
@@ -28,6 +30,8 @@ const Dashboard = ({
       {profile !== null ? (
         <Fragment>
           <DashboardActions />
+          <Education education={profile.education} />
+          <Experience experience={profile.experience} />
         </Fragment>
       ) : (
         <Fragment>

@@ -40,14 +40,11 @@ const EditProfile = ({
       bio: loading || !profile.bio ? '' : profile.bio,
       githubusername:
         loading || !profile.githubusername ? '' : profile.githubusername,
-      youtube: loading || !profile.social.youtube ? '' : profile.social.youtube,
-      twitter: loading || !profile.social.twitter ? '' : profile.social.twitter,
-      facebook:
-        loading || !profile.social.facebook ? '' : profile.social.facebook,
-      linkedin:
-        loading || !profile.social.linkedin ? '' : profile.social.linkedin,
-      instagram:
-        loading || !profile.social.instagram ? '' : profile.social.instagram
+      youtube: loading || !profile.social ? '' : profile.social.youtube,
+      twitter: loading || !profile.social ? '' : profile.social.twitter,
+      facebook: loading || !profile.social ? '' : profile.social.facebook,
+      linkedin: loading || !profile.social ? '' : profile.social.linkedin,
+      instagram: loading || !profile.social ? '' : profile.social.instagram
     });
   }, [loading]); // when it's loading that will run
 
@@ -248,9 +245,9 @@ const EditProfile = ({
 };
 
 EditProfile.propTypes = {
+  profile: PropTypes.object.isRequired,
   createProfile: PropTypes.func.isRequired,
-  getCurrentProfile: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired
+  getCurrentProfile: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
