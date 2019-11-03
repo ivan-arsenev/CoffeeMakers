@@ -1,4 +1,9 @@
-import { GET_PROFILE, PROFILE_ERROR, CLEAR_PROFILE } from '../actions/types';
+import {
+  GET_PROFILE,
+  PROFILE_ERROR,
+  CLEAR_PROFILE,
+  UPDATE_PROFILE
+} from '../actions/types';
 
 const initialState = {
   profile: null, // individual page
@@ -12,6 +17,7 @@ export default function(state = initialState, action) {
   const { type, payload } = action;
   switch (type) {
     case GET_PROFILE: // that what we declared in action, by axax request took response with payload => send it by async dispatch
+    case UPDATE_PROFILE:
       return {
         ...state, // return current state => redux will compare and check what data extualy changed
         profile: payload, // so prifile changed, reducer will return current and new profile data

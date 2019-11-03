@@ -8,9 +8,9 @@ import Spinner from '../layout/Spinner';
 
 // component with jsx and destructored props in params, not only data alse functions that comes from actions
 const Dashboard = ({
-  getCurrentProfile,
   auth: { user },
-  profile: { profile, loading }
+  profile: { profile, loading },
+  getCurrentProfile
 }) => {
   useEffect(() => {
     getCurrentProfile();
