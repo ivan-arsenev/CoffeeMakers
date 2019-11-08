@@ -5,7 +5,8 @@ import {
   POST_ERROR,
   UPDATE_LIKES,
   DELETE_POST,
-  ADD_POST
+  ADD_POST,
+  GET_POST
 } from './types';
 
 // Get posts
@@ -15,6 +16,23 @@ export const getPosts = () => async dispatch => {
 
     dispatch({
       type: GET_POSTS,
+      payload: res.data
+    });
+  } catch (error) {
+    dispatch({
+      type: POST_ERROR,
+      payload: { msg: error.response.statusText, status: error.response.status }
+    });
+  }
+};
+
+// Get post
+export const getPost = id => async dispatch => {
+  try {
+    const res = await axios.get(`/api/post/${id}`);
+
+    dispatch({
+      type: GET_POST,
       payload: res.data
     });
   } catch (error) {
