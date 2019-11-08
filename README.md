@@ -1,5 +1,7 @@
 # This is simple social media app that implements MERN stack approach
 
+Live demo: https://shrouded-garden-74812.herokuapp.com/
+
 In this demo, I would like to reproduce kind of social interaction app, where you could register or edit users.
 Alse it's provides post new messages to news board. Edit or delete these messages.
 Before use, you need to create default.js in config folder.
