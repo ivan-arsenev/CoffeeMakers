@@ -26,3 +26,9 @@ After, put there mongoDB connection string and jwtSecret (token)
 
     It's really anoing to write always axios.get('http://localhost:5000/api/profiles')
     so set proxy to axios in package.json  "proxy" : "http://localhost:5000"
+
+## Heroku deploy
+
+    -heroku login
+    create in config producation.json with server info
+    in package.json  "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
